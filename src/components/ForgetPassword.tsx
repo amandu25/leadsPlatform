@@ -1,22 +1,21 @@
 import React from "react";
 import { AiOutlineUser } from "react-icons/ai";
-import { IoLockClosedOutline } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 import AuthLayout from "./shared/layout/AuthLayout";
 import Input from "./shared/ui/Input";
 import Button from "./shared/ui/Button";
 import Divider from "./shared/ui/Divider";
 
-const Login: React.FC = () => {
+const ForgetPassword: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle login logic
+    // Handle forgot password logic
   };
 
   return (
     <AuthLayout
-      title="Sign in"
-      subtitle="Let's get started with your job search"
+      title="Forgot Password"
+      subtitle="Lorem ipsum dolor sit ame consectetur emet"
     >
       <form className="w-full max-w-sm space-y-6" onSubmit={handleSubmit}>
         <Input
@@ -25,23 +24,8 @@ const Login: React.FC = () => {
           icon={<AiOutlineUser />}
           required
         />
-        <Input
-          type="password"
-          placeholder="Password"
-          icon={<IoLockClosedOutline />}
-          required
-        />
-        <Button type="submit">Sign in</Button>
+        <Button type="submit">Send Code</Button>
       </form>
-
-      <div className="text-sm text-gray-400 mt-6 w-full max-w-sm flex justify-between">
-        <a href="#" className="hover:text-white transition-colors duration-200">
-          Reset password?
-        </a>
-        <a href="#" className="hover:text-white transition-colors duration-200">
-          Sign-up
-        </a>
-      </div>
 
       <Divider text="or" className="my-8" />
 
@@ -55,4 +39,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default ForgetPassword;
