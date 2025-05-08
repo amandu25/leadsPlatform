@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import bigSparkle from "../assets/bigSparkle.svg";
 import smallSparkle from "../assets/smallSparkle.svg";
 import AuthLayout from "./shared/layout/AuthLayout";
 import Button from "./shared/ui/Button";
 
 export default function PasswordChanged() {
+  const navigate = useNavigate();
   return (
     <AuthLayout title="" subtitle="">
       <div className="relative w-full max-w-sm mx-auto bg-transparent py-12 px-6 sm:px-10 flex flex-col items-center justify-center">
@@ -34,7 +36,8 @@ export default function PasswordChanged() {
         <p className="text-sm text-gray-400 mb-10 text-center">
           Your password has been changed successfully
         </p>
-        <Button>Back to Login</Button>
+
+        <Button onClick={() => navigate("/")}>Back to Login</Button>
       </div>
     </AuthLayout>
   );

@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import loginSvg from "../assets/login.svg";
 
 const OTP_LENGTH = 5;
@@ -87,17 +88,18 @@ export default function OtpInput() {
               </div>
             ))}
           </div>
-
-          <button
-            className={`w-full py-3.5 rounded-full font-semibold shadow-lg transition-colors duration-200 ${
-              otp.every((digit) => digit !== "")
-                ? "bg-[#ffce3a] text-black hover:bg-[#e6b933] focus:outline-none focus:ring-2 focus:ring-[#ffce3a] focus:ring-offset-2 focus:ring-offset-black"
-                : "bg-gray-600 text-gray-400 cursor-not-allowed"
-            }`}
-            disabled={!otp.every((digit) => digit !== "")}
-          >
-            Verify
-          </button>
+          <Link to="/resetPassword">
+            <button
+              className={`w-full py-3.5 rounded-full font-semibold shadow-lg transition-colors duration-200 ${
+                otp.every((digit) => digit !== "")
+                  ? "bg-[#ffce3a] text-black hover:bg-[#e6b933] focus:outline-none focus:ring-2 focus:ring-[#ffce3a] focus:ring-offset-2 focus:ring-offset-black"
+                  : "bg-gray-600 text-gray-400 cursor-not-allowed"
+              }`}
+              disabled={!otp.every((digit) => digit !== "")}
+            >
+              Verify
+            </button>
+          </Link>
 
           <div className="mt-6 text-center">
             {timer === 0 ? (

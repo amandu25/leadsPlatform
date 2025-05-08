@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import AuthLayout from "./shared/layout/AuthLayout";
@@ -24,7 +25,9 @@ const ForgetPassword: React.FC = () => {
           icon={<AiOutlineUser />}
           required
         />
-        <Button type="submit">Send Code</Button>
+        <Link to="/otp">
+          <Button type="submit">Send Code</Button>
+        </Link>
       </form>
 
       <Divider text="or" className="my-8" />

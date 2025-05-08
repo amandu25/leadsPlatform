@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import { Eye, EyeOff } from "lucide-react";
 import AuthLayout from "./shared/layout/AuthLayout";
 import Input from "./shared/ui/Input";
@@ -88,8 +90,9 @@ const ResetPassword = () => {
         />
 
         {errors && <p className="text-red-500 text-sm">{errors}</p>}
-
-        <Button type="submit">Reset Password</Button>
+        <Link to="/passwordChanged">
+          <Button type="submit">Reset Password</Button>
+        </Link>
       </form>
     </AuthLayout>
   );

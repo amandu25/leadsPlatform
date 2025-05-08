@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoLockClosedOutline } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
@@ -31,16 +32,29 @@ const Login: React.FC = () => {
           icon={<IoLockClosedOutline />}
           required
         />
-        <Button type="submit">Sign in</Button>
+        <Link to="/home">
+          <Button type="submit">Sign in</Button>
+        </Link>
       </form>
 
       <div className="text-sm text-gray-400 mt-6 w-full max-w-sm flex justify-between">
-        <a href="#" className="hover:text-white transition-colors duration-200">
-          Reset password?
-        </a>
-        <a href="#" className="hover:text-white transition-colors duration-200">
-          Sign-up
-        </a>
+        <Link to="/forgetPassword">
+          <a
+            href="#"
+            className="hover:text-white transition-colors duration-200"
+          >
+            Forget password?
+          </a>
+        </Link>
+
+        <Link to="/signup">
+          <a
+            href="#"
+            className="hover:text-white transition-colors duration-200"
+          >
+            Sign-up
+          </a>
+        </Link>
       </div>
 
       <Divider text="or" className="my-8" />
