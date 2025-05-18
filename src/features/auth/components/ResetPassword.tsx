@@ -1,10 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { AuthLayout } from "../../../shared/components";
+import { Input, Button } from "../../../shared/components/ui";
 import { Eye, EyeOff } from "lucide-react";
-import AuthLayout from "./shared/layout/AuthLayout";
-import Input from "./shared/ui/Input";
-import Button from "./shared/ui/Button";
 
 const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState("");

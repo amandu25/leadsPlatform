@@ -1,8 +1,8 @@
+import { AuthLayout } from "../../../shared/components";
+import { Button } from "../../../shared/components/ui";
 import { useNavigate } from "react-router-dom";
 import bigSparkle from "../assets/bigSparkle.svg";
 import smallSparkle from "../assets/smallSparkle.svg";
-import AuthLayout from "./shared/layout/AuthLayout";
-import Button from "./shared/ui/Button";
 
 export default function PasswordChanged() {
   const navigate = useNavigate();

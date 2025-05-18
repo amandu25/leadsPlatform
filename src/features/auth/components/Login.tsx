@@ -1,17 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoLockClosedOutline } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
-import AuthLayout from "./shared/layout/AuthLayout";
-import Input from "./shared/ui/Input";
-import Button from "./shared/ui/Button";
-import Divider from "./shared/ui/Divider";
+import { AuthLayout } from "../../../shared/components";
+import { Input, Button, Divider } from "../../../shared/components/ui";
 
-const Login: React.FC = () => {
+interface LoginProps {
+  onLoginSuccess?: () => void;
+}
+
+const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
+  const navigate = useNavigate();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle login logic
+    if (onLoginSuccess) {
+      onLoginSuccess();
+      navigate("/home");
+    }
   };
 
   return (
@@ -32,9 +40,7 @@ const Login: React.FC = () => {
           icon={<IoLockClosedOutline />}
           required
         />
-        <Link to="/home">
-          <Button type="submit">Sign in</Button>
-        </Link>
+        <Button type="submit">Sign in</Button>
       </form>
 
       <div className="text-sm text-gray-400 mt-6 w-full max-w-sm flex justify-between">

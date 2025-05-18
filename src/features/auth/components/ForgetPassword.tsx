@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-import AuthLayout from "./shared/layout/AuthLayout";
-import Input from "./shared/ui/Input";
-import Button from "./shared/ui/Button";
-import Divider from "./shared/ui/Divider";
+import { AuthLayout } from "../../../shared/components";
+import { Input } from "../../../shared/components/ui";
+import Button from "../../../shared/components/ui/Button";
+import Divider from "../../../shared/components/ui/Divider";
 
 const ForgetPassword: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

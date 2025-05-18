@@ -2,10 +2,8 @@ import React from "react";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoLockClosedOutline } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
-import AuthLayout from "./shared/layout/AuthLayout";
-import Input from "./shared/ui/Input";
-import Button from "./shared/ui/Button";
-import Divider from "./shared/ui/Divider";
+import { AuthLayout } from "../../../shared/components";
+import { Input, Button, Divider } from "../../../shared/components/ui";
 
 const SignUp: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

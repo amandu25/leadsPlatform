@@ -1,5 +1,5 @@
 import React from "react";
-import loginSvg from "../../../assets/login.svg";
+import loginSvg from "../../../features/auth/assets/login.svg";
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -30,7 +30,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({
       </div>
 
       {/* Right Side - Illustration */}
-      <div className="hidden lg:flex w-full lg:w-1/2 bg-[#251c00] items-center justify-center p-8 sm:p-12 lg:p-16">
+      <div className="flex w-full lg:w-1/2 bg-[#251c00] items-center justify-center p-8 sm:p-12 lg:p-16">
         <img
           src={loginSvg}
           alt="Authentication Illustration"
