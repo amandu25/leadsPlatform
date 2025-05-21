@@ -1,30 +1,30 @@
 import "./App.css";
-import React, { useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+// import React, { useState } from "react";
+// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-// Import components from feature modules
-import { Home } from "./features/dashboard";
-import {
-  Login,
-  SignUp,
-  ForgetPassword,
-  OtpInput,
-  ResetPassword,
-  PasswordChanged,
-} from "./features/auth";
-import { ProfileSetup } from "./features/profile";
+// // Import components from feature modules
+// import { Home } from "./features/dashboard";
+// import {
+//   Login,
+//   SignUp,
+//   ForgetPassword,
+//   OtpInput,
+//   ResetPassword,
+//   PasswordChanged,
+// } from "./features/auth";
+// import { ProfileSetup } from "./features/profile";
 
 function App() {
-  // Mock authentication state
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // // Mock authentication state
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Protected route wrapper
-  const ProtectedRoute = ({ children }: { children: React.ReactElement }) => {
-    if (!isAuthenticated) {
-      return <Navigate to="/" replace />;
-    }
-    return children;
-  };
+  // // Protected route wrapper
+  // const ProtectedRoute = ({ children }: { children: React.ReactElement }) => {
+  //   if (!isAuthenticated) {
+  //     return <Navigate to="/" replace />;
+  //   }
+  //   return children;
+  // };
 
   return (
     // <BrowserRouter>
