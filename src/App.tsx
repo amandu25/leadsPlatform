@@ -27,35 +27,35 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={<Login onLoginSuccess={() => setIsAuthenticated(true)} />}
-        />
-        <Route
-          path="/home"
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/profile-setup"
-          element={
-            <ProtectedRoute>
-              <ProfileSetup />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/forgetPassword" element={<ForgetPassword />} />
-        <Route path="/otp" element={<OtpInput />} />
-        <Route path="/resetPassword" element={<ResetPassword />} />
-        <Route path="/passwordChanged" element={<PasswordChanged />} />
-      </Routes>
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route
+    //       path="/"
+    //       element={<Login onLoginSuccess={() => setIsAuthenticated(true)} />}
+    //     />
+    //     <Route
+    //       path="/home"
+    //       element={
+    //         <ProtectedRoute>
+    //           <Home />
+    //         </ProtectedRoute>
+    //       }
+    //     />
+    //     <Route
+    //       path="/profile-setup"
+    //       element={
+    //         <ProtectedRoute>
+    //           <ProfileSetup />
+    //         </ProtectedRoute>
+    //       }
+    //     />
+    //     <Route path="/signup" element={<SignUp />} />
+    //     <Route path="/forgetPassword" element={<ForgetPassword />} />
+    //     <Route path="/otp" element={<OtpInput />} />
+    //     <Route path="/resetPassword" element={<ResetPassword />} />
+    //     <Route path="/passwordChanged" element={<PasswordChanged />} />
+    //   </Routes>
+    // </BrowserRouter>
   );
 }
 
